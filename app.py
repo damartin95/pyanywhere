@@ -20,4 +20,4 @@ def index():
 @app.route('/background_process_test')
 def background_process_test():
     print ("Hello1")
-    return ("nothing")
+    return ("test")

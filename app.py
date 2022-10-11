@@ -19,5 +19,5 @@ def index():
 #background process happening without any refreshing
 @app.route('/background_process_test')
 def background_process_test():
-    print ("Hello")
+    print ("Hello1")
     return ("nothing")

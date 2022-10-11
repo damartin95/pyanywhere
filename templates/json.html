@@ -7,28 +7,27 @@
 <p>My first paragraph.</p>
 
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script type=text/javascript>
-        $(function() {
-          $('a#test').on('click', function(e) {
-            e.preventDefault()
-            $.getJSON('/background_process_test',
-                function(data) {
-              //do nothing
-            });
-            return false;
-          });
-        });
+ var btnName = function() {
+  $.get('/background_process_test',
+    function(x) {
+      $("#resBtnHere").html(x);
+    }
+  )
+}
+btnName()
+        
 </script>
 
+<button
+  type="button"
+  class="btn btn-primary"
+  onclick="btnName()"
+        >Click here
+</button>
+In html, result of your function on button press (if needed):
 
-<div class='container'>
-    <h3>Test</h3>
-        <form>
-            <a href=# id=test><button class='btn btn-default'>Test</button></a>
-        </form>
-
-</div>
+<p id="resBtnHere"></p>
 
 </body>
 </html>

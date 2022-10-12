@@ -4,14 +4,12 @@
 		<title>my bisch</title> 
 	</head> 
 	<body> 
-		<h1>my bisch</h1> 
-		
+		<h1>Square Calculator</h1> 
 		<form method="post" id="form"> 
 			<label for="num">Enter Number : </label> 
 			<input type="text" id="num" name="number" autofocus autocomplete="off"> 
 			<button>Post</button> 
 		</form> 
-		
 		<p id="square"></p> 
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> 
 		<script> 
@@ -24,11 +22,10 @@
 					method: 'POST', 
 					success: function(data) { 
 						$('#num').val(''); 
-						$('#square').html('Square of ' + number + ' is ' + data['square']);
-						
+						$('#square').html('Square of ' + number + ' is ' + data['square']) 
 					} 
 				}); 
 			}); 
 		</script> 
 	</body> 
-</html> 
+</html>

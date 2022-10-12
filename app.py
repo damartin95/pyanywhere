@@ -32,7 +32,6 @@ def receiveAndReturn():
     if request.method == "POST":
         firstname = request.form['firstname']
         lastname = request.form['lastname']
-        
 	output = returnNameCombination(firstname, lastname)
 	
 	

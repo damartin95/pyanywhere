@@ -21,11 +21,11 @@ def index():
 def square(): 
 	num = float(request.form.get('number', 0)) 
 	
-	tester = string(request.form.get('test', 0)) 
+	
     	
 
 
 	square = num ** 2 
-	data = {'square': square, 'tester_ret': tester} 
+	data = {'square': square} 
 	data = jsonify(data) 
 	return data 

@@ -14,7 +14,7 @@ def git_update():
 
 @app.route('/')
 def index():
-  return render_template("json.html")
+  return render_template("twoInputs.html")
 
 
 @app.route('/square/', methods=['POST']) 
@@ -24,6 +24,18 @@ def square():
 	data = {'square': square} 
 	data = jsonify(data) 
 	return data 
+
+
+@app.route('/twos', methods=['GET','POST'])
+def receiveAndReturn():
+    if request.method == "POST":
+        firstname = request.form['firstname']
+        lastname = request.form['lastname']
+        output = firstname + lastname
+        if firstname and lastname:
+            return jsonify({'output':'Your Name is ' + output + ', right?'})
+        return jsonify({'error' : 'Missing data!'})
+    return render_template('twoInputs.html')
  
 if __name__ == '__main__': 
 	app.run(debug=True)

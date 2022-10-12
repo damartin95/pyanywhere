@@ -20,7 +20,7 @@
 				e.preventDefault(); 
 				$.ajax({ 
 					url: '/square/', 
-					data: {'number': number}, 
+					data: {'number': number, 'test': 'test'}, 
 					method: 'POST', 
 					success: function(data) { 
 						$('#num').val(''); 

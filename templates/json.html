@@ -22,7 +22,7 @@
 				var number = $('#num').val(); 
 				e.preventDefault(); 
 				$.ajax({ 
-					url: 'http://127.0.0.1:5000/square/', 
+					url: '/square/', 
 					data: {'number': number}, 
 					method: 'POST', 
 					success: function(data) { 

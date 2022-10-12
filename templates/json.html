@@ -25,6 +25,7 @@
 					success: function(data) { 
 						$('#num').val(''); 
 						$('#square').html('Square of ' + number + ' is ' + data['square']) 
+						$('#tester_ret').html(data['tester_ret']) 
 					} 
 				}); 
 			}); 

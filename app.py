@@ -17,7 +17,7 @@ def index():
   return render_template("json.html")
 
 #background process happening without any refreshing
-@app.route('/background_process_test')
+@app.route('/background_process_test', methods=['POST']) 
 def background_process_test():
     print ("Hello")
     return ("nothing")

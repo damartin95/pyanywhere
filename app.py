@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template, json
+from flask import Flask, request, render_template, jsonify
 from flask.wrappers import Response
 import git
 

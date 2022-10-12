@@ -19,8 +19,12 @@ def index():
  
 @app.route('/square/', methods=['POST']) 
 def square(): 
-	print('test')
 	num = float(request.form.get('number', 0)) 
+	
+	print request.args.get('number')
+    	
+
+
 	square = num ** 2 
 	data = {'square': square} 
 	data = jsonify(data) 

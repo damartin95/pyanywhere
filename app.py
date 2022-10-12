@@ -1,6 +1,7 @@
 from flask import Flask, request, render_template, jsonify
 from flask.wrappers import Response
 import git
+from second import returnNameCombination
 
 app = Flask(__name__)
 
@@ -31,7 +32,10 @@ def receiveAndReturn():
     if request.method == "POST":
         firstname = request.form['firstname']
         lastname = request.form['lastname']
-        output = firstname + lastname
+        
+	output = returnNameCombination(firstname, lastname): 
+	
+	
         if firstname and lastname:
             return jsonify({'output':'Your Name is ' + output + ', right?'})
         return jsonify({'error' : 'Missing data!'})

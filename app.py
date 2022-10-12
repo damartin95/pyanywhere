@@ -21,7 +21,7 @@ def index():
 def square(): 
 	num = float(request.form.get('number', 0)) 
 	
-	print request.args.get('number')
+	print(request.args.get('number'))
     	
 
 

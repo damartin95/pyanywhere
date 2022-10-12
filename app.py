@@ -33,7 +33,7 @@ def receiveAndReturn():
         firstname = request.form['firstname']
         lastname = request.form['lastname']
         
-	output = returnNameCombination(firstname, lastname): 
+	output = returnNameCombination(firstname, lastname)
 	
 	
         if firstname and lastname:

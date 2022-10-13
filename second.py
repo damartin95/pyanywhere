@@ -10,7 +10,7 @@ import numpy as np
 USER_AGENT = 'Mozilla/5.0'
 
 def returnNameCombination(name1, name2):
-  return (name1+name2)
+  return callMeBaby()
 
 
 def lastfm_get(payload, user):

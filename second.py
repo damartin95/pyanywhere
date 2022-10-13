@@ -90,6 +90,7 @@ def callMeBaby(name1, name2):
         if '@attr' in r0_df.columns: 
             r0_df = r0_df.drop('@attr', axis=1) # this fucker only shows up when a song is being played
             r0_df = r0_df.iloc[1:] # removed the top row as it contains None in its 'Date' column
+            r0_df = r0_df.reset_index(drop=True)
     
         print('6', r0_df)
         r0_df['new_artist'] = r0_df['new_artist'].str[2:-2]

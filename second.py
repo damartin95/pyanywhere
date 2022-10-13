@@ -10,7 +10,7 @@ import numpy as np
 USER_AGENT = 'Mozilla/5.0'
 
 def returnNameCombination(name1, name2):
-    return callMeBaby()
+    return callMeBaby(name1, name2)
 
 
 def lastfm_get(payload, user):
@@ -27,9 +27,9 @@ def lastfm_get(payload, user):
     return response
 
 
-def callMeBaby():
+def callMeBaby(name1, name2):
     user = np.array(
-             ['835defa77f6078c7a34c3c6ba04854c6', 'wuhuspringfield']
+             [name1, name2]
              #, ['ab8ab5b6deefd7b8afa5c1adab89fcb8', 'feybmertn']
              )
     page = 1

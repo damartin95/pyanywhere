@@ -33,8 +33,6 @@ def receiveAndReturn():
         firstname = request.form['firstname']
         lastname = request.form['lastname']
         output = returnNameCombination(firstname, lastname) 
-	
-	
         if firstname and lastname:
             return jsonify({'output':'Your Name is ' + output + ', right?'})
         return jsonify({'error' : 'Missing data!'})

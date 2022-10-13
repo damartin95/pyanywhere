@@ -33,7 +33,7 @@ def callMeBaby(name1, name2):
              #, ['ab8ab5b6deefd7b8afa5c1adab89fcb8', 'feybmertn']
              )
     page = 1
-    limit = 2
+    limit = 1
     
     payload = {
                 'method': 'user.getrecenttracks',

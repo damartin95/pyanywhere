@@ -84,7 +84,7 @@ def update_output_div(n_clicks, mbid, username):
         ])
 
         return graph_website
-    return 'You! have entered "{}" and "{}" and clicked {} times. Please provide valid information'.format(mbid, username, n_clicks)
+    return 'You - sir - have entered "{}" and "{}" and clicked {} times. Please provide valid information'.format(mbid, username, n_clicks)
 
 
 

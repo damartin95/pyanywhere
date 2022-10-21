@@ -6,6 +6,7 @@ import plotly.express as px
 from dash import dcc, html
 from dash.dependencies import Input, Output, State
 from flask import Flask
+import git
 
 
 server = Flask(__name__)

@@ -58,7 +58,7 @@ def update_output_div(n_clicks, mbid, username):
             html.H1(children='Hello Dash'),
 
             html.Div(children='''
-                Dash: A web application framework for your data.
+                Dashyyyyyyy: A web application framework for your data.
             '''),
 
             dcc.Graph(

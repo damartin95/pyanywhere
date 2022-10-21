@@ -14,7 +14,13 @@ server = Flask(__name__)
 external_stylesheets =['https://www.w3schools.com/w3css/4/w3.css', dbc.themes.BOOTSTRAP]
 app = dash.Dash(server=server, external_stylesheets=external_stylesheets)
 
-
+@app.route('/git-update', methods=['POST'])
+def git_update():
+  repo = git.Repo('./pyanywhere')
+  origin = repo.remotes.origin
+  repo.create_head('main', origin.refs.main).set_tracking_branch(origin.refs.main).checkout()                                
+  origin.pull()
+  return '', 200
 
 nav_contents = [
     dbc.NavItem(dbc.NavLink("Active", href="#", active=True)),

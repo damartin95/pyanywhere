@@ -5,9 +5,14 @@ import pandas as pd
 import plotly.express as px
 from dash import dcc, html
 from dash.dependencies import Input, Output, State
+from flask import Flask
+
+
+server = Flask(__name__)
+
 
 external_stylesheets =['https://www.w3schools.com/w3css/4/w3.css', dbc.themes.BOOTSTRAP]
-app = dash.Dash(external_stylesheets=external_stylesheets)
+app = dash.Dash(server=server, external_stylesheets=external_stylesheets)
 
 
 

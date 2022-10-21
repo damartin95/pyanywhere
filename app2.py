@@ -14,7 +14,7 @@ server = Flask(__name__)
 external_stylesheets =['https://www.w3schools.com/w3css/4/w3.css', dbc.themes.BOOTSTRAP]
 app = dash.Dash(server=server, external_stylesheets=external_stylesheets)
 
-@app.route('/git-update', methods=['POST'])
+@server.route('/git-update', methods=['POST'])
 def git_update():
   repo = git.Repo('./pyanywhere')
   origin = repo.remotes.origin
